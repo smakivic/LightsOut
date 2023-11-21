@@ -1,0 +1,19 @@
+<body>
+    <div class="center-div">
+        <select [(ngModel)]="matrixSize" (change)="updateMatrix()" class="selector">
+            <option class="option" *ngFor="let size of sizes" [value]="size">{{size}} x {{size}}</option>
+        </select>
+        <div class="matrix">
+            <div *ngFor="let row of matrix; let i = index" class="row">
+                <div *ngFor="let cell of row; let j = index" class="cell" (click)="toggleValue(i, j)" [class.cellOff]="cell==0"
+                     [class.cellOn]="cell==1">
+                </div>
+            </div>
+        </div>
+        <div>
+            <button (click)="createProblem()" class="btn">Add problem</button>
+            <button (click)="resetProblem()" class="btn">Reset</button>
+        </div>
+
+    </div>
+</body>

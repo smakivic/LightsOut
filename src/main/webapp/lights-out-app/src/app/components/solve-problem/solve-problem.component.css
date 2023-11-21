@@ -1,0 +1,65 @@
+body{
+    background-color: #2D3047;
+}
+.row {
+    display: flex;
+}
+
+.matrix{
+    background-color: transparent;
+    border: 1px solid white;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 15px 27px;
+}
+
+.cellOff {
+    /* width 5vw and height the same */
+    width: 2.2rem;
+    height: 2.2rem;
+    margin: 2px;
+    background-color: #85817f;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.cellOn {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin: 2px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #beba03;
+    border-radius: 3px;
+
+}
+.cellBorder{
+    border: 3px solid red;
+}
+.center-div {
+    display: grid;
+    place-items: center;
+    margin: 1% auto;
+
+    /*height: 100vh; !* Optional: Set a height for vertical centering *!*/
+}
+
+.btn{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 20px 5px;
+    font-size: 20px;
+}
+.btn:hover{
+    border: 1px solid #d2ce17;
+    color: #d2ce17;
+}

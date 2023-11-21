@@ -1,0 +1,18 @@
+<body>
+<div class="center-div">
+    <div class="matrix">
+        <div *ngFor="let row of matrix; let i = index" class="row">
+            <div *ngFor="let cell of row; let j = index" class="cell" (click)="solved ? null : toggleValues(i, j)"
+                 [class.cellOff]="cell.value==0"
+                 [class.cellOn]="cell.value==1"
+                 [class.cellBorder]="cell.bordered">
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <button (click)="solved ? null : getSolution()" class="btn">Get solution</button>
+        <button (click)="setMatrix()" class="btn">Reset</button>
+    </div>
+</div>
+</body>

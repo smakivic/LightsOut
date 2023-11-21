@@ -1,0 +1,82 @@
+
+
+body{
+    background-color: #2D3047;
+}
+.row {
+    display: flex;
+}
+
+.matrix{
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 20px 32px;
+}
+
+.cellOff {
+    /* width 5vw and height the same */
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #85817f;
+    border: 1px solid #ccc;
+    display: flex;
+    margin: 2px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.cellOn {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin: 2px;
+
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #d2ce17;
+    border-radius: 3px;
+
+}
+
+.btn{
+    margin: 20px 5px;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.btn:hover{
+    border: 1px solid #d2ce17;
+    color: #d2ce17;
+}
+.btn:active{
+    border: none;
+}
+
+.selector {
+    margin: 20px 5px;
+    font-size: 20px;
+    background-color: #2D3047;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+option{
+    border: none;
+}
+
+.center-div {
+    display: grid;
+    place-items: center;
+    margin: 1% auto;
+
+    /*height: 100vh; !* Optional: Set a height for vertical centering *!*/
+}
+
+

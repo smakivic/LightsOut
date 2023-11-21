@@ -1,0 +1,43 @@
+<div class="container">
+    <div *ngIf="problemList.length < 1">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="row problem-text">
+                    <p>No problems yet!</p>
+                </div>
+                <div class="row ">
+                    <button class="btn-create" routerLink="/create-problem">Create new problem</button>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    <div *ngIf="problemList.length > 0" class="container-fluid">
+        <div class="row">
+
+            <button class="btn-create2" routerLink="/create-problem"> Create new problem </button>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-lg-4" style="margin: auto" *ngFor="let problem of problemList">
+                <div class="problem-container" routerLink="/solve-problem/{{problem.id}}">
+                    {{ fillMatrix(problem) }}
+                    <div class="center-div">
+                        <div class="matrix">
+                            <div *ngFor="let row of matrix; let i = index" class="row">
+                                <div *ngFor="let cell of row; let j = index" class="cell"
+                                     [class.cellOff]="cell.value==0"
+                                     [class.cellOn]="cell.value==1"
+                                     [class.cellBorder]="cell.bordered">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="description">{{problem.problemSize}}x{{problem.problemSize}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

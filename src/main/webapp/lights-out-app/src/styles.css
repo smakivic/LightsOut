@@ -1,0 +1,26 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #2D3047;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-bottom: 75px;
+    margin-top: 95px;
+}
+
+main {
+    flex: 1; /* This will make the main content grow to fill the available space */
+}
+
+footer {
+    background-color: #2D3047;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
